@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+
+<html lang="eng">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="1.css">
+
+        <title>Collections</title>
+
+    </head>
+
+    <body>
+
+        <!-- Navigation Bar -->
+
+        <div class="nav">
+                <ul>
+
+                    <li class="list active">
+                    <a href="#">
+                        <span class="text">Free</span>
+                        <span class="icon"><ion-icon name="happy-outline"></ion-icon></span>
+                        
+                    </a>
+                    </li>
+                    <li class="list">
+                    <a href="#">
+                        <span class="text">Paid</span>
+                        <span class="icon"><ion-icon name="card-outline"></ion-icon></span>
+                        
+                    </a>
+                    </li>
+                    <li class="list">
+                    <a href="#">
+                        <span class="text">Sites</span>
+                        <span class="icon"><ion-icon name="navigate-circle-outline"></ion-icon></span>
+                        
+                    </a>
+                    </li>
+                    <li class="list">
+                    <a href="#">
+                        <span class="text">Parks</span>
+                        <span class="icon"><ion-icon name="partly-sunny-outline"></ion-icon></span>
+                        
+                    </a>
+                    </li>
+
+                    <!-- Indicator Button-->
+                    
+                    <div class="indicator"></div>
+
+                    <div class="page_1">
+                        <p id="titlep1">title 1</p>
+                        <div id="p1d"></div>
+                        <div class="freepics">
+                            <img src="img.png" alt="pic-1" class="pic1 p1">
+                            <img src="img.png" alt="pic-2" class="pic1 p2">
+                            <img src="img.png" alt="pic-3" class="pic1 p3">
+                            <img src="img.png" alt="pic-4" class="pic1 p4">
+                            <img src="img.png" alt="pic-5" class="pic1 p5">
+                        </div>
+                    </div>
+
+                    <div class="page_2">
+                        <p id="titlep2">paid attractions</p>
+                        <div id="p2d"></div>
+                        <div class="slider">
+                            <span style="--i:1;"><img src="img.png" alt="pic1"></span>
+                            <span style="--i:2;"><img src="img.png" alt="pic2"></span>
+                            <span style="--i:3;"><img src="img.png" alt="pic3"></span>
+                            <span style="--i:4;"><img src="img.png" alt="pic4"></span>
+                            <span style="--i:5;"><img src="img.png" alt="pic5"></span>
+                            <span style="--i:6;"><img src="img.png" alt="pic6"></span>
+                            <span style="--i:7;"><img src="img.png" alt="pic7"></span>
+                            <span style="--i:8;"><img src="img.png" alt="pic8"></span>
+                        </div>
+                    </div>
+
+                    <div class="page_3"></div>
+                    <div class="page_4"></div>
+
+
+
+
+                </ul>
+        </div>
+
+
+        <!--Fixed Background-->
+        <div class="fixedbg">
+            
+        </div>
+
+
+        
+
+
+
+     <!--Bottom Layer-->
+     <div class="bl"> </div>
+
+
+        
+
+
+        <!--SCRIPT FOR Navigation Button-->
+        <script>
+            const list = document.querySelectorAll('.list');
+            function activeLink(){
+             list.forEach((item) =>
+             item.classList.remove('active'));
+             this.classList.add('active');
+            }
+            list.forEach((item) =>
+            item.addEventListener('click' ,activeLink));
+        </script>
+
+
+
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    </body>
+</html>

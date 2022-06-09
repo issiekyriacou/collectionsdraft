@@ -1,0 +1,473 @@
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    background-color:#f5f4f4;
+}
+
+/*   Navigation Bar */
+
+.nav{
+    width: 90px;
+    height: 300px;
+    background-color: white;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    margin-left: 10%;
+    box-shadow: 2px 2px 2px #000000;
+    border: #000000 20% ;
+}
+
+.nav ul{
+    display: flexbox;
+    text-align: center;
+    
+}
+
+.nav ul li{
+    position: relative;
+    list-style: none;
+    width: 90px;
+    height: 50px;
+    z-index: 1;
+}
+
+.nav ul li a{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    font-weight: 300;
+    font-size: 15px;
+}
+
+.nav ul li a .icon{
+    display: inline;
+    line-height: 50px;
+    width: 20px;
+    position: relative;
+    font-size: 25px;
+    text-align: center;
+    transition: 0.5s;
+    color: #2e2828;
+}
+
+.nav ul li.active a .icon{
+    transform: translateX(48px);
+}
+
+.nav ul li a .text{
+    position: absolute;
+    color: #2e2828;
+    transition: 0.5s;
+    opacity: 0;
+    transform: translateX(-25px)
+}
+
+.nav ul li.active a .text{
+    opacity: 1;
+}
+
+.indicator{
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border-radius: 50px;
+    background-color: #92fafa;
+    top:10%;
+    right:-50%;
+    border: solid #2e2828 8px;
+    transition: 0.5s;
+}
+
+.indicator::before{
+    content: '';
+    position: absolute;
+}
+
+.indicator::after{
+    content: '';
+    position: absolute;
+}
+
+
+.nav ul li:nth-child(1).active ~ .indicator{
+    transform: translateY(calc(50px * 0));
+    background-color: #92fafa;
+}
+
+.nav ul li:nth-child(2).active ~ .indicator{
+    transform: translateY(calc(50px * 1));
+    background-color: #A7FA92;
+}
+
+.nav ul li:nth-child(3).active ~ .indicator{
+    transform: translateY(calc(50px * 2));
+    background-color: #F6FA59;
+}
+
+.nav ul li:nth-child(4).active ~ .indicator{
+    transform: translateY(calc(50px * 3));
+    background-color: #FED43E;
+}
+
+
+
+/* Fixed Background */
+
+.fixedbg{
+    position: fixed;
+    align-items: center;
+    background-color:#2e2828;
+    width: 1550px;
+    height: 700px;
+    z-index: -1;
+    left: 13%;
+    border-radius: 50px;
+    transition: 0.5s;
+
+}
+
+
+/* PAGES */
+
+
+.page_1{
+    position:absolute;
+    width: 1565px;
+    height: 820px;
+    background-color: transparent;
+    bottom: -100%;
+    left: 50%;
+    transition: 0.5s;
+}
+
+.nav ul li:nth-child(1).active ~ .page_1{
+    transform: translateY(calc(50px * 0));
+    background-color: transparent;
+}
+
+.nav ul li:nth-child(2).active ~ .page_1{
+    transform: translateY(calc(50px * 0));
+    background-color: transparent;
+    display: none;
+}
+
+.nav ul li:nth-child(3).active ~ .page_1{
+    transform: translateY(calc(50px * 0));
+    background-color: transparent;
+    display: none;
+}
+
+.nav ul li:nth-child(4).active ~ .page_1{
+    transform: translateY(calc(50px * 0));
+    background-color: transparent;
+    display: none;
+}
+
+.page_2{
+    position:absolute;
+    width: 1565px;
+    height: 820px;
+    background-color: transparent;
+    bottom: -100%;
+    left: 50%;
+    transition: 0.5s;
+}
+
+.nav ul li:nth-child(1).active ~ .page_2{
+    transform: translateY(calc(50px * 0));
+    background-color: transparent;
+    display: none;
+}
+
+.nav ul li:nth-child(2).active ~ .page_2{
+    transform: translateY(calc(50px * 0));
+    background-color: transparent;
+    border: solid 5px blue;
+
+}
+
+.nav ul li:nth-child(3).active ~ .page_2{
+    transform: translateY(calc(50px * 0));
+    background-color: transparent;
+    display: none;
+}
+
+.nav ul li:nth-child(4).active ~ .page_2{
+    transform: translateY(calc(50px * 0));
+    background-color: transparent;
+    display: none;
+}
+
+.page_3{
+    position:absolute;
+    width: 1565px;
+    height: 820px;
+    background-color: transparent;
+    bottom: -100%;
+    left: 50%;
+    transition: 0.5s;
+}
+
+.nav ul li:nth-child(1).active ~ .page_3{
+    transform: translateY(calc(50px * 0));
+    background-color: transparent;
+    display: none;
+}
+
+.nav ul li:nth-child(2).active ~ .page_3{
+    transform: translateY(calc(50px * 0));
+    background-color: transparent;
+    display: none;
+}
+
+.nav ul li:nth-child(3).active ~ .page_3{
+    transform: translateY(calc(50px * 0));
+    background-color: transparent;
+    border: solid 5px purple;
+
+}
+
+.nav ul li:nth-child(4).active ~ .page_3{
+    transform: translateY(calc(50px * 0));
+    background-color: transparent;
+    display: none;
+}
+
+
+.page_4{
+    position:absolute;
+    width: 1565px;
+    height: 820px;
+    background-color: transparent;
+    bottom: -100%;
+    left: 50%;
+    transition: 0.5s;
+}
+
+.nav ul li:nth-child(1).active ~ .page_4{
+    transform: translateY(calc(50px * 0));
+    background-color: transparent;
+    display: none;
+}
+
+.nav ul li:nth-child(2).active ~ .page_4{
+    transform: translateY(calc(50px * 0));
+    background-color: transparent;
+    display: none;
+}
+
+.nav ul li:nth-child(3).active ~ .page_4{
+    transform: translateY(calc(50px * 0));
+    background-color: transparent;
+    display: none;
+}
+
+.nav ul li:nth-child(4).active ~ .page_4{
+    transform: translateY(calc(50px * 0));
+    background-color: transparent;
+    border: solid 5px fuchsia;
+
+}
+
+
+
+
+
+
+/* content on page 1///////////////////////////////////////////////// */
+
+
+#titlep1{
+    color: #f5f4f4;
+    font-family: 'Poppins';
+    font-size: 60px;
+    width: 1520px;
+    margin-top: 65px;
+    text-align: right;
+    
+}
+
+#p1d{
+    position:fixed;
+    width: 1325px;
+    height: 475px;
+    background-color: #B5C8C8;
+    bottom: 0%;
+    left: 7%;
+    box-shadow: 2px 2px 2px #000000;
+    border: #000000 4% ;
+    border-radius: 80px;
+
+}
+
+.freepics{
+    width: 1200px;
+    margin: 0 auto;
+
+    position: relative;
+}
+
+.pic1{
+    width: 300px;
+    height: 300px;
+    border-radius: 1px;
+    box-shadow: 0 20px 45px rgb(0,0,4);
+
+    position:absolute;
+    z-index: 10;
+    outline-offset: 3px;
+    transform: all 0.2s;
+
+    cursor: pointer;
+}
+
+.p1{
+    top:55px;
+    left: 0;
+    z-index: 2;
+}
+
+.p2{
+    top:90px;
+    left: 220px;
+    z-index: 3;
+}
+
+.p3{
+    top: 125px;
+    left: 370px;
+}
+
+.p4{
+    top: 90px;
+    left: 590px;
+    z-index: 3;
+}
+
+.p5{
+    top:55px;
+    left: 875px;
+    z-index: 2;
+}
+
+.pic1:hover{
+    outline: 5px solid #92fafa;
+    transform: scale(1.05) translateY(-20px);
+    z-index: 20;
+}
+
+.freepics:hover .gallery-photo:not(:hover){
+    transform: scale(0.98)
+
+}
+
+.pic1:active{
+    outline: 7.5px solid #ffffff;
+    transform: scale(1) translateY(-20px);
+    z-index: 20;
+}
+
+
+
+
+/*content on page 2/////////////////////////////////////////////*/
+
+#titlep2{
+    color: #f5f4f4;
+    font-family: 'Poppins';
+    font-size: 60px;
+    width: 1520px;
+    margin-top: 65px;
+    text-align: right;
+    
+}
+
+#p2d{
+    position:fixed;
+    width: 1325px;
+    height: 475px;
+    background-color: #C7DAC2;
+    bottom: 20%;
+    left: 7%;
+    box-shadow: 2px 2px 2px #000000;
+    border: #000000 4% ;
+    border-radius: 80px;
+
+}
+
+.slider{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    left: 45%;
+    top: 22%;
+
+    transform-style: preserve-3d;
+    animation: rotate 40s linear infinite;
+}
+
+@keyframes rotate{
+    0%{
+        transform: perspective(1000px) rotateY(0deg);
+    }
+
+    100%{
+        transform: perspective(1000px) rotateY(360deg);
+    }
+
+}
+
+.slider span{
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+    transform-origin: center;
+    transform-style: preserve-3d;
+    transform: rotateY(calc(var(--i)*45deg)) translateZ(350px);
+}
+
+.slider span img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 100px;
+    object-fit: cover;
+    transition: 3s;
+}
+
+.slider span:hover img{
+    transform: translateY(-50px) scale(1.2);
+
+    cursor: pointer;
+}
+
+.slider span:active img{
+    transform: scale(1.5);
+    border-radius: 5px;
+    transition: 2s;
+
+    cursor: grabbing; 
+
+}
